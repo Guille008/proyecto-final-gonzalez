@@ -1,4 +1,5 @@
 import { CartWidge } from "./CartWidge";
+import { Link } from "react-router-dom";
 
 
 export function Nav(){
@@ -9,9 +10,9 @@ export function Nav(){
             </article>
             <article>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Sucursales</a></li>
+                    <li><Link to="inicio">Inicio</Link></li>
+                    <li><Link to="contacto">Contacto</Link></li>
+                    <li><Link to="sucursales">Sucursales</Link></li>
                 </ul>
             </article>
             <article>
