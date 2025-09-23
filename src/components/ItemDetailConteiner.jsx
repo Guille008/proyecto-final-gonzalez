@@ -1,35 +1,52 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "./firebaseConfig"
+import { ItemDetail } from "./ItemDetail"
+import { Button, Spinner, VStack, Text } from "@chakra-ui/react"
+import { toaster } from "./ui/toaster"
 
 export function ItemDetailConteiner() {
-
-    const params = useParams()
-    const [produc, setProduc] = useState({})
+    const { id } = useParams()
+    const [produc, setProduc] = useState(null)
 
     useEffect(() => {
-        async function getData() {
+        async function getSingleProductByDoc() {
             try {
-                const resultado = await fetch(`https://fakestoreapi.com/products/${params.id}`)
-                const resultado2 = await resultado.json()
-                setProduc(resultado2)
+                const filtro = doc(db, "productos", id)
+                const consulta = await getDoc(filtro)
+
+                if (consulta.exists()) {
+                    setProduc({ id: consulta.id, ...consulta.data() })
+
+                } else {
+                    console.log("No encontrado")
+                }
             } catch (error) {
-                console.log(error)
-            }
+            toaster.create({
+                title: "Error al guardar el pedido",
+                description: error.message,
+                type: "error",
+            });
+        }
         }
 
-        getData()
-    }, [])
+        if (id) getSingleProductByDoc()
+    }, [id])
 
-    //Vista
+
+    if (!produc) return (
+        <main>
+            <VStack colorPalette="teal">
+                <Spinner color="colorPalette.1000" />
+                <Text color="colorPalette.1000">Cargando..</Text>
+            </VStack>
+        </main>
+    )
+
     return (
         <main>
-            <section className="detailConteiner">
-                <h1>{produc.title}</h1>
-                <img src={produc.image} style={{white:"200px", height:"200px"}}></img>
-                <p>{produc.description}</p>
-                <strong>${produc.price}</strong>
-
-            </section>
+            <ItemDetail produc={produc} />
         </main>
     )
 }

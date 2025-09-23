@@ -4,15 +4,13 @@
   list-style: none;
   text-decoration: none;
 }
-a{
-  color: black;
-}
+
 
 /*ESRILOS NAV*/
 nav{
   display: flex;
   justify-content: space-between;
-  background-color: #cedf99;
+  background-color: #05163d;
   padding: 7px;
   align-items: center;
   font-size: 20px;
@@ -29,8 +27,12 @@ nav ul{
 
 nav button{
   font-size: 25px;
-  background-color: rgba(128, 128, 128, 0.651);
+  background-color: #05163d;
   border-radius: 5px;
+}
+nav button:hover{
+  background-color: #0a3158;
+  cursor: pointer;
 }
 
 /*ESTILOS MAIN*/
@@ -38,20 +40,25 @@ main{
   width: 100%;
   height: 100%;
   min-height: 100dvh;
-  background-color:#eff4dd;
+  background-color:rgb(14, 14, 13);
+  padding: 10px;
+}
+.mainFormulario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cardConteiner{
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 .card{
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 5px;
+
 }
 
 .card ul{
@@ -71,14 +78,8 @@ main{
   display: flex;
   justify-content: left;
 }
-.btnDetail{
-  padding: 3px;
-  border-radius: 3PX;
-  background-color: #cedf99;
-}
-.btnDetail:hover{
-  background-color: white;
-}
+
+
 h2{
   font-size: 20px;
 }
@@ -95,12 +96,18 @@ h2{
 .detailConteiner strong{
   font-size: 35px;
 }
+.formularioFinalizacion{
+  gap: 20px;
+  width: 85%;
+  height: 90dvh;
+  background-color: #05163d;
+}
 
 /*ESTILOS FOOTER*/
 footer{
-  background-color: #bdd476;
+  background-color: #0a3158;
   display: flex;
   justify-content: center;
-  padding: 15px;
-  font-size: 18px;
+  padding: 4px;
+  font-size: 12px;
 }

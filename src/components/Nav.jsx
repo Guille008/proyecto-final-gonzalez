@@ -10,9 +10,9 @@ export function Nav(){
             </article>
             <article>
                 <ul>
-                    <li><Link to="inicio">Inicio</Link></li>
-                    <li><Link to="contacto">Contacto</Link></li>
-                    <li><Link to="sucursales">Sucursales</Link></li>
+                    <li><Link to="Inicio">Inicio</Link></li>
+                    <li><Link to="Contacto">Contacto</Link></li>
+                    <li><Link to="Sucursales">Sucursales</Link></li>
                 </ul>
             </article>
             <article>
