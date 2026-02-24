@@ -1,12 +1,40 @@
-# React + Vite
+# 🛒 E-commerce React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simulador de e-commerce desarrollado como proyecto final del curso de React.  
+La aplicación permite navegar productos, ver detalles, agregarlos al carrito y generar una orden de compra.
 
-Currently, two official plugins are available:
+> ⚠️ La plataforma de pago no está integrada (simulación sin pasarela real).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- Context API (manejo de estado global para el carrito)
+- Firebase (Firestore - lectura de productos)
+- Vite
+- CSS
+
+---
+
+## 📌 Funcionalidades principales
+
+- Visualización dinámica de productos desde Firebase
+- Filtrado por categorías
+- Vista detallada de cada producto
+- Carrito de compras
+- Generación de orden de compra con ID único
+- Navegación SPA con React Router
+
+---
+
+## 🧠 Qué aprendí en este proyecto
+
+- Manejo de estado global con Context API
+- Estructuración de una aplicación en componentes reutilizables
+- Consumo de datos desde Firestore
+- Manejo de rutas dinámicas con React Router
+- Organización de carpetas en proyectos React con Vite
+
+---
