@@ -6,7 +6,7 @@ export function Nav(){
     return(
         <nav>
             <article>
-                <img src="../imagenes/logo.png"></img>
+                <img src="./imagenes/logo.png"></img>
             </article>
             <article>
                 <ul>

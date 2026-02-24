@@ -83,6 +83,17 @@ main{
 h2{
   font-size: 20px;
 }
+#sucursales{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.map{
+  width: 70%;
+  height: 90%;
+}
+
 .detailConteiner{
   width: 50%;
   min-height: 100dvh;

@@ -91,7 +91,7 @@ export function ItemListContainer() {
                       <Box p="1"><Link to={`/Detalle/${prod.id}`}>Detalle</Link></Box>
                     </Button>
                     <ButtonComprar producto={prod} />
-                    <Contador />
+                    <Contador id={prod.id} />
                   </Card.Footer>
                 </Box>
               </Card.Root>
